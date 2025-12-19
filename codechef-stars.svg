@@ -1,34 +1,65 @@
-<svg width="420" height="80" viewBox="0 0 420 80" xmlns="http://www.w3.org/2000/svg">
+<svg width="440" height="90" viewBox="0 0 440 90" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- soft golden glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- gold gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffefb0"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#b8962e"/>
+    </linearGradient>
+  </defs>
+
   <style>
     .star {
-      fill: #d4af37;
-      animation: pulse 2.6s ease-in-out infinite;
+      fill: url(#goldGrad);
+      filter: url(#glow);
+      animation: wave 3.6s ease-in-out infinite;
       transform-origin: center;
+      opacity: 0.75;
     }
-    .s2 { animation-delay: 0.2s; }
-    .s3 { animation-delay: 0.4s; }
-    .s4 { animation-delay: 0.6s; }
-    .s5 { animation-delay: 0.8s; }
 
-    @keyframes pulse {
-      0%, 100% { opacity: 0.55; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.08); }
+    .s1 { animation-delay: 0s; }
+    .s2 { animation-delay: 0.15s; }
+    .s3 { animation-delay: 0.30s; }
+    .s4 { animation-delay: 0.45s; }
+    .s5 { animation-delay: 0.60s; }
+
+    @keyframes wave {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.7;
+      }
+      50% {
+        transform: translateY(-5px) scale(1.1);
+        opacity: 1;
+      }
     }
 
     text {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 18px;
-      fill: #555;
+      fill: #666;
     }
   </style>
 
+  <!-- Label -->
   <text x="20" y="30">CodeChef</text>
 
-  <polygon class="star s1" points="40,52 45,65 59,65 48,73 52,87 40,79 28,87 32,73 21,65 35,65"/>
-  <polygon class="star s2" points="80,52 85,65 99,65 88,73 92,87 80,79 68,87 72,73 61,65 75,65"/>
-  <polygon class="star s3" points="120,52 125,65 139,65 128,73 132,87 120,79 108,87 112,73 101,65 115,65"/>
-  <polygon class="star s4" points="160,52 165,65 179,65 168,73 172,87 160,79 148,87 152,73 141,65 155,65"/>
-  <polygon class="star s5" points="200,52 205,65 219,65 208,73 212,87 200,79 188,87 192,73 181,65 195,65"/>
+  <!-- Stars (fully inside canvas) -->
+  <polygon class="star s1" points="40,55 45,65 56,65 47,72 50,83 40,77 30,83 33,72 24,65 35,65"/>
+  <polygon class="star s2" points="90,55 95,65 106,65 97,72 100,83 90,77 80,83 83,72 74,65 85,65"/>
+  <polygon class="star s3" points="140,55 145,65 156,65 147,72 150,83 140,77 130,83 133,72 124,65 135,65"/>
+  <polygon class="star s4" points="190,55 195,65 206,65 197,72 200,83 190,77 180,83 183,72 174,65 185,65"/>
+  <polygon class="star s5" points="240,55 245,65 256,65 247,72 250,83 240,77 230,83 233,72 224,65 235,65"/>
 
-  <text x="260" y="68">5★</text>
+  <!-- Rating -->
+  <text x="300" y="75">5★</text>
 </svg>
