@@ -6,7 +6,7 @@
 
 <p align="center">
   <b>CodeChef 6★ Coder</b><br>
-  <sub>Global Rank 286 · Top 0.13% active coders Worldwide</sub>
+  <sub>World Rank 147 · Top 0.08% active coders Worldwide</sub>
 </p>
 
 
