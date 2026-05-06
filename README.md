@@ -1,4 +1,4 @@
-<div align="center" class="hero">
+<div class="hero">
   <h1 class="vibrate-text">
     "Escape while it’s still a choice."
   </h1>
@@ -13,8 +13,7 @@
   }
 
   .hero {
-    background-color: #000000;
-    padding: 60px 20px;
+    background-color: #000;
     height: 100vh;
 
     display: flex;
@@ -23,13 +22,14 @@
   }
 
   .vibrate-text {
-    color: #ffffff;
+    color: white;
     font-size: 32px;
     font-weight: 500;
     letter-spacing: 1px;
 
-    animation: vibrate 0.08s infinite alternate,
-               glow 2s infinite ease-in-out;
+    animation:
+      vibrate 0.08s infinite alternate,
+      glow 2s infinite ease-in-out;
 
     text-shadow:
       0 0 5px rgba(255,255,255,0.4),
@@ -39,43 +39,37 @@
 
   @keyframes vibrate {
     0% {
-      transform: translate(0px, 0px) rotate(0deg);
+      transform: translate(0px, 0px);
     }
+
     25% {
-      transform: translate(-2px, 1px) rotate(-0.5deg);
+      transform: translate(-2px, 1px);
     }
+
     50% {
-      transform: translate(2px, -1px) rotate(0.5deg);
+      transform: translate(2px, -1px);
     }
+
     75% {
-      transform: translate(-1px, -2px) rotate(-0.3deg);
+      transform: translate(-1px, -2px);
     }
+
     100% {
-      transform: translate(2px, 2px) rotate(0.3deg);
+      transform: translate(2px, 2px);
     }
   }
 
   @keyframes glow {
     0% {
       opacity: 0.7;
-      text-shadow:
-        0 0 5px rgba(255,255,255,0.2),
-        0 0 10px rgba(255,255,255,0.1);
     }
 
     50% {
       opacity: 1;
-      text-shadow:
-        0 0 10px rgba(255,255,255,0.6),
-        0 0 20px rgba(255,255,255,0.4),
-        0 0 40px rgba(255,255,255,0.2);
     }
 
     100% {
       opacity: 0.7;
-      text-shadow:
-        0 0 5px rgba(255,255,255,0.2),
-        0 0 10px rgba(255,255,255,0.1);
     }
   }
 </style>
