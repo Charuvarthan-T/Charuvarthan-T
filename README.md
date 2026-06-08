@@ -1,3 +1,1 @@
-<p align="center">
-  <img src="./banner.svg" width="100%" />
-</p>
+<img width="1155" height="306" alt="image" src="https://github.com/Charuvarthan-T/Charuvarthan-T/blob/main/l.png" />
